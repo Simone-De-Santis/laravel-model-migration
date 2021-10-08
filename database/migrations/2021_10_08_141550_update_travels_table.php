@@ -15,6 +15,9 @@ class UpdateTravelsTable extends Migration
     {
         Schema::table('travels', function (Blueprint $table) {
             //
+            $table->text("description");
+            $table->tinyInteger("duration");
+            $table->foreignId("id_transport");
         });
     }
 
