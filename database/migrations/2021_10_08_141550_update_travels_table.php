@@ -30,6 +30,9 @@ class UpdateTravelsTable extends Migration
     {
         Schema::table('travels', function (Blueprint $table) {
             //
+            $table->dropColumn("description");
+            $table->dropColumn("duration");
+            $table->dropColumn("id_transport");
         });
     }
 }
